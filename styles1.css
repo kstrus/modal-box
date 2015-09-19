@@ -1,0 +1,136 @@
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #444;
+    font-size: 16px;
+}
+
+body {
+    background-color: #E8DD95;
+    overflow: hidden;
+    /* for IE: prevents appearance of scrollbar on main window when large amounts of text is used*/
+}
+
+html,
+body,
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+body,
+div,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin-bottom: 10px;
+    line-height: 1.3em;
+}
+
+.code {
+    background-color: #ffffcc;
+    padding: 0 2px;
+    border-radius: 3px;
+    font-family: Courier, monospace;
+}
+
+.window {
+    position: relative;
+    background-color: #FFA7A4;
+    width: 50%;
+    max-width: 500px;
+    min-height: 300px;
+    height: 50%;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+button {
+    color: #fff;
+    background-color: #B283E8;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    padding: 0;
+}
+
+.content {
+    height: 90%;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+
+.content:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.left,
+.right {
+    width: 48%;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.button-normal {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0 auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow: auto;
+    }
+    body,
+    .container {
+        height: auto;
+    }
+    .window {
+        width: 95%;
+        max-width: 95%;
+        min-height: auto;
+        height: auto;
+        top: 0;
+        transform: none;
+        margin: 10px auto;
+    }
+    .button-close {
+        display: none;
+    }
+    .left,
+    .right {
+        float: none;
+        width: auto;
+    }
+    p {
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Modal window</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="window">
+            <button onclick="closeWindow()" type="button" class="button-close">X</button>
+            <div class="content">
+                <div class="left">
+                    <p>Oczywiście centrowanie można zrobić na wiele sposobów. Na przykład tak jak w <span class="code">styles1.css</span> lub <span class="code">styles2.css</span> albo <span class="code">styles3.css</span></p>
+                    <p>Sposób 1: do centrowania w pionie używamy <span class="code">transform</span>. Niestety nie zadziała w IE8 i Operze Mini.</p>
+                    <p>Sposób 2: <b>Flexbox</b>. Też nie zadziała w IE8, a jeśli chcemy wspierać starsze przeglądarki to trzeba używać całego mnóstwa prefixów.</p>
+                    <p>Sposób 3: <span class="code">position: absolute</span>. Powinno zadziałać zawsze i wszędzie.</p>
+                </div>
+                <div class="right">
+                    <p>Pozdrawiam i życzę owocnej rekrutacji :0)</p>
+                </div>
+            </div>
+            <button type="button" class="button-normal">Watch video</button>
+        </div>
+    </div>
+
+    <script>
+        function closeWindow() {
+            var w = document.getElementsByClassName("window");
+            w[0].style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
